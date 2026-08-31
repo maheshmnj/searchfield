@@ -1,3 +1,7 @@
+### [3.0.0] - Aug 31, 2026
+
+- [BREAKING] Migrate to [`material_ui`](https://pub.dev/packages/material_ui) so `SearchField` works in apps that left `package:flutter/material.dart` (Flutter 3.47+). Requires Flutter 3.47.0 or greater. See [#265](https://github.com/maheshj01/searchfield/issues/265).
+
 ### [2.0.0] - Feb 15, 2026
 
 - [BREAKING] Fix: [Issue: #256](https://github.com/maheshj01/searchfield/issues/256) Add maintainLabelSize to SearchInputDecoration (Requires Flutter 3.41.0 or greater)

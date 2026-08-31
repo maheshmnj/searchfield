@@ -1,4 +1,4 @@
-# [searchfield: ^2.0.0](https://pub.dev/packages/searchfield)
+# [searchfield: ^3.0.0](https://pub.dev/packages/searchfield)
 
 <a href="https://github.com/maheshj01/searchfield" rel="noopener" target="_blank"><img src="https://img.shields.io/badge/platform-flutter-ff69b4.svg" alt="Flutter Platform Badge"></a>
 <a href="https://pub.dev/packages/searchfield"><img src="https://img.shields.io/pub/v/searchfield.svg" alt="Pub"></a>
@@ -47,6 +47,7 @@ flutter pub add searchfield
 
 ```
 import 'package:searchfield/searchfield.dart';
+import 'package:material_ui/material_ui.dart';
 ```
 
 Use the Widget in three steps
@@ -452,7 +453,7 @@ The position of suggestions is dynamic based on the space available for the sugg
   each `SearchFieldListItem` in the list requires a unique searchKey, which is used to search the list and an optional Widget, Custom Object to display custom widget and to associate a object with the suggestion list.
 - `suggestionState`: enum to hide/show the suggestion on focusing the searchfield defaults to `SuggestionState.expand`.
 - `searchStyle` : textStyle for the search Input.
-- `searchInputDecoration` : decoration for the search Input (e.g to update HintStyle) similar to built in textfield widget.
+- `searchInputDecoration` : decoration for the search Input (e.g to update HintStyle) similar to built in textfield widget. Types come from [`material_ui`](https://pub.dev/packages/material_ui) (`InputDecoration`, `OutlineInputBorder`, …).
 - `suggestionsDecoration` : decoration for suggestions List with ability to add box shadow background color and much more.
 - `suggestionDirection` : direction of the suggestions list, defaults to `SuggestionDirection.down`.
 - `suggestionItemDecoration` : decoration for suggestionItem with ability to add color and gradient in the background.
@@ -463,6 +464,12 @@ The position of suggestions is dynamic based on the space available for the sugg
 - `textAlign`: specifies the alignment of the text in the searchfield. Defaults to `TextAlign.start`.
 
 ### You can find all the [code samples here](https://github.com/maheshj01/searchfield/tree/master/example)
+
+## Migrations
+
+### v2 to v3
+
+Starting with version 3.0.0 this package uses the official [`material_ui`](https://pub.dev/packages/material_ui) library instead of `package:flutter/material.dart`. `SearchInputDecoration` and other Material types (`InputDecoration`, `OutlineInputBorder`, `Theme`, `Colors`, …) now come from `material_ui`, so import `package:material_ui/material_ui.dart` when configuring them. Requires Flutter 3.47.0 or greater. See the [material_ui migration guide](https://pub.dev/packages/material_ui#migrating-existing-code-to-this-package).
 
 ### Contributing
 

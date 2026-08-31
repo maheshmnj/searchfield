@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:searchfield/searchfield.dart';
 
 import 'meta_data.dart';
@@ -23,6 +23,23 @@ void main() {
   }
 
   group('Searchfield sanitary tests: ', () {
+    testWidgets(
+        'SearchField renders under a material_ui Scaffold without a framework Material error',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: SearchField<String>(
+            suggestions:
+                ['ABC', 'DEF'].map(SearchFieldListItem<String>.new).toList(),
+          ),
+        ),
+      ));
+
+      expect(tester.takeException(), isNull);
+      expect(find.byType(ErrorWidget), findsNothing);
+      expect(find.byType(TextFormField), findsOneWidget);
+    });
+
     testWidgets(
         'Test assert: Initial value should either be null or should be present in suggestions list.',
         (WidgetTester tester) async {

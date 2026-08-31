@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 extension FurdleTitle on String {
   Widget toTitle({double boxSize = 25}) {

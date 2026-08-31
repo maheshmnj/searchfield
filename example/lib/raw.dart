@@ -2,7 +2,7 @@
 //
 // This code is a minimal repro, used to report issue related to overlay
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() => runApp(const MyApp());
 
