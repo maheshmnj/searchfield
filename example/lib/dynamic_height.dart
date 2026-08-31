@@ -3,7 +3,7 @@
 import 'dart:math';
 
 import 'package:example/user_model.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:searchfield/searchfield.dart';
 
 import 'user_data.dart';

@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:searchfield/src/decoration.dart';
 import 'package:searchfield/src/input_decoration.dart';
 import 'package:searchfield/src/key_intents.dart';
